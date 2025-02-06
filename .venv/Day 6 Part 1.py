@@ -19,6 +19,7 @@ for itr in cutted:
         end = list(map(int,parts[3].split(",")))
 
     sub_light = lights.loc[start[0]:end[0],start[1]:end[1]]
+#the idea of using sub_light to identify the changing range and using "split" to read the intructions come from Doubao LLM. The prompt is "How to read these instructions and seperate actions from locations", and "How to select a range from an existed Pandas dataframe"
 
     if trigger == "on":
         sub_light[:] = 1
